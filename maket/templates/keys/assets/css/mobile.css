@@ -1,0 +1,70 @@
+@media screen and (max-width: 1180px) {
+	.random__item_platinum > .random__size {
+		width: 246px;
+		padding: 25px 30px;
+	}
+
+	.random__another {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.random__aitem_5keys {
+		margin-top: 15px;
+	}
+
+	.games__list {
+		justify-content: space-around;
+	}
+
+	.random__item_gold {
+		margin-left: 20px;
+	}
+
+	.random__item_silver {
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 1045px) {
+	.random__item_platinum::after {
+		visibility: hidden;
+	}
+}
+
+
+@media screen and (max-width: 840px) {
+	.random__places {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.random__item_platinum {
+		flex-grow: 0;
+		margin: auto;
+	}
+
+	.random__item_gold,
+	.random__item_silver {
+		margin: auto;
+	}
+
+	.random__another {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.random__places {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.random__item {
+		margin-bottom: 20px;
+	}
+
+	.random__item:last-child {
+		margin-bottom: 0px;
+	}
+}

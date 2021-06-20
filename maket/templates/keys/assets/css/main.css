@@ -1,0 +1,559 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: fixed #000 url('../images/bg.jpg') 50% 0% no-repeat;
+	background-size: cover;
+	font-size: 14px;
+	color: white;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.wrapper {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+header {
+	margin-top: 30px;
+}
+
+/* Меню */
+.menu {
+	display: flex;
+	align-items: center;
+}
+
+.menu__logo {
+	font-size: 28px;
+	font-weight: 800;
+	text-transform: none;
+	color: #ffba00;
+	transition: color .3s;
+}
+
+.menu__logo:hover {
+	color: #fff;
+}
+
+.menu__list {
+	display: flex;
+	justify-content: flex-start;
+	flex-grow: 2;
+	margin-left: 30px;
+}
+
+.menu__link {
+	text-transform: uppercase;
+	margin-left: 25px;
+	transition: color .3s;
+	font-weight: bold;
+}
+
+.menu__link:hover {
+	color: #ffba00;
+}
+
+.menu__link-purchases {
+	color: #ffba00;
+	transition: color .3s;
+}
+
+.menu__link-purchases:hover {
+	color: #fff;
+}
+
+/* Рандомные места */
+.random {
+	margin-top: 50px;
+}
+
+.random__places {
+	display: flex;
+	justify-content: space-between;
+}
+
+.random__item {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 300px;
+	width: 246px;
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.random__item:hover {
+	-webkit-transform: scale(1.05) rotate(2deg);
+	transform: scale(1.05) rotate(2deg);
+}
+
+.random__size {
+	width: 246px;
+	height: 300px;
+	padding: 25px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.random__item-title {
+	color: #ffba00;
+	font-weight: 800;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.random__item-description {
+	font-size: 16px;
+}
+
+.random__item-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.random__item-price_end {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.random__item-price_start {
+	opacity: .7;
+	text-decoration: line-through;
+}
+
+.random__item_gold {
+	background-image: url('../images/gold.png');
+}
+
+.random__item_platinum {
+	flex-grow: 1;
+	margin: 0 50px;
+	position: relative;
+	background: #ffba00;
+}
+
+.random__item_platinum::after {
+	position: absolute;
+	background-image: url('../images/watchdogs2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	content: '';
+	width: 256px;
+	height: 109%;
+	bottom: 0;
+	right: -15px;
+}
+
+.random__item_platinum > .random__size {
+	padding-left: 50px;
+	width: 300px;
+}
+
+.random__item_platinum > .random__size > .random__item-title {
+	color: white;
+}
+
+.random__item_silver {
+	background-image: url('../images/silver.png');
+}
+
+.random__another {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.random__aitem {
+	height: 205px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px;
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.random__aitem:hover {
+	-webkit-transform: scale(1.05) rotate(2deg);
+	transform: scale(1.05) rotate(2deg);
+}
+
+.random__aitem_gta {
+	background-image: url('../images/gta5.png');
+	width: 488px;
+}
+
+.random__aitem_5keys {
+	background-image: url('../images/5keys.png');
+	width: 647px;
+}
+
+.random__aitem-title {
+	color: #ffba00;
+	font-weight: 800;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.random__aitem-description {
+	color: #565656;
+}
+
+.random__aitem-price {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.random__aitem-price_end {
+	color: #fff;
+	font-weight: 800;
+	font-size: 28px;
+}
+
+.random__aitem-price_discound {
+	color: #ffba00;
+	font-weight: 800;
+	margin-left: 10px;
+	font-size: 16px;
+	text-shadow: 0px 0px 10px rgba(255, 186, 0, 1);
+}
+
+.random__aitem-price_start {
+	color: #565656;
+	text-decoration: line-through;
+}
+
+/* Список игр */
+
+.games {
+	margin-top: 50px;
+}
+
+.games__title {
+	text-align: center;
+	color: #ffba00;
+	font-size: 28px;
+}
+
+.games__list {
+	margin-top: 10px;
+	margin-left: -45px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.games__item {
+	margin-top: 40px;
+	margin-left: 46px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 260px;
+	min-height: 400px;
+	cursor: pointer;
+	transition: transform .3s;
+}
+
+.games__item:hover {
+	-webkit-transform: scale(1.05) rotate(2deg);
+  	transform: scale(1.05) rotate(2deg);
+}
+
+.games__item-image {
+	max-width: 100%;
+}
+
+.games__item-title {
+	font-weight: 800;
+	font-size: 26px;
+	text-transform: uppercase;
+	line-height: 20px;
+}
+
+.games__item-desc {
+	color: #565656;
+}
+
+.games__item-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.games__item-discount {
+	background: #ffba00;
+	color: #4c3700;
+	padding: 6px 16px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.games__item-endprice {
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.games__item-startprice {
+	color: #565656;
+	text-decoration: line-through;
+}
+
+/* Пагинация */
+
+.pagination {
+	margin: 0 auto;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination__item {
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ffba00;
+	border: 2px solid #ffba00;
+	border-radius: 50%;
+	margin-left: 10px;
+	transition: .4s;
+	transition-property: color, background;
+	font-size: 20px;
+	padding-bottom: 1px;
+}
+
+.pagination__item:first-child {
+	margin-left: 0;
+}
+
+.pagination__item:hover,
+.pagination__item-active {
+	color: #565656;
+	background: #000;
+}
+
+/* How to buy */
+
+.how__title {
+	margin-top: 50px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.how__item {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.how__item-img {
+	max-width: 50%;
+}
+
+.how__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.how__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.how__info-number {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #ffba00;
+	border-radius: 50%;
+	margin-left: 10px;
+	font-size: 60px;
+	padding-bottom: 1px;
+}
+
+.how__info-description {
+	text-align: center;
+	margin-top: 25px;
+	font-size: 18px;
+}
+
+.guarantees__title {
+	color: #ffba00;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.guarantees__content {
+	margin-top: 50px;
+}
+
+.support__title {
+	color: #ffba00;
+	text-align: center;
+	margin-top: 100px;
+}
+
+.support__content {
+	text-align: center;
+	margin-top: 25px;
+}
+
+.support__content-img {
+	margin-top: 25px;
+}
+
+/* Popup */
+
+.games__popup-bg {
+	display: none;
+}
+
+.games__item-popup {
+	width: 900px;
+}
+
+.fancybox-slide > .games__item-popup {
+	background: #000 url('../images/modal_bg.jpg') 50% 0% no-repeat;
+	background-size: cover;
+}
+
+.games__popup-title {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.games__popup-description {
+	color: #565656;
+}
+
+.games__popup-content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.games__popup-content-item {
+	height: 415px;
+}
+
+.games__popup-content-item-text {
+	flex-grow: 1;
+}
+
+.games__popud-content_text {
+	padding-right: 15px;
+	height: 435px;
+}
+
+.games__popup-content_buy {
+	max-width: 240px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.games__popup-img {
+	width: 250px;
+}
+
+.games__popup-price {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.games__popup-endprice {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.games__popup-startprice {
+	color: #565656;
+	text-decoration: line-through;
+}
+
+.games__popup-button {
+	background: #ffba00;
+	color: #4c3700;
+	font-size: 20px;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.games__popup-screens {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 35px;
+	margin-left: -20px;
+}
+
+.games__popup-screens_item {
+	width: 200px;
+	margin-left: 20px;
+}
+
+/* Footer */
+
+footer {
+	margin-top: 50px;
+}
+
+.footer__credits {
+	margin: 50px 0px;
+	text-align: center;
+}
+
+.footer__link {
+	transition: color .3s;
+	font-weight: bold;
+}
+
+.footer__link:hover {
+	color: #ffba00;
+}
+
+.footer__link-purchases {
+	color: #ffba00;
+	transition: color .3s;
+}
+
+.footer__link-purchases:hover {
+	color: #fff;
+}

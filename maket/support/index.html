@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="interkassa-verification" content="421d52889a396d26cdbcdc83025a0c9e" />
+		<title>KEYSHOP - Игровые ключи.</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="shortcut icon" href="../templates/keys/assets/images/favicon.ico" />
+		<link rel="stylesheet" href="../templates/keys/assets/vendor/fancybox/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="../templates/keys/assets/css/main.css">
+		<link rel="stylesheet" href="../templates/keys/assets/css/mobile.css">
+
+					</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="menu">
+	<a class="menu__item menu__logo" href="../index.html">KEYSHOP</a>
+	<div class="menu__item menu__list">
+		<a class="menu__link" href="../index.html">Главная</a>
+		
+		<a class="menu__link" href="index.html">Поддержка</a>
+		<a class="menu__link" href="../guarantees/index.html">Гарантии</a>
+	</div>
+	<a class="menu__item menu__link menu__link-purchases" href="">Наша группа</a>
+</nav>			</header>
+				<main>
+		<h1 class="support__title">Техническая поддержка</h1>
+		<div class="support__content">
+			<p>Вы на странице для поддержки магазина. С своим вопросом или проблемой Вы можете обратиться  на странице заказа в вкладке ПЕРЕПИСКА. Большая просьба - не дублируйте свои заявки по несколько раз и по разным контактам - ведь если каждый будет так делать, скорость ответа будет пропорционально расти. Оперативность ответа зависит от времени суток и типа Вашего вопроса. Мы делаем всё, чтобы Вам лишний раз не приходилось что-то уточнять в поддержке магазина!</p>
+			<img class="support__content-img" src="../templates/keys/assets/images/support.jpg" alt="Техническая поддержка">
+		</div>
+	</main>
+			<footer>
+				<nav class="menu">
+	<a class="menu__item menu__logo" href="../index.html">KEYSHOP</a>
+	<div class="menu__item menu__list">
+		<a class="menu__link" href="../index.html">Главная</a>
+		
+		<a class="menu__link" href="index.html">Поддержка</a>
+		<a class="menu__link" href="../guarantees/index.html">Гарантии</a>
+	</div>
+	<a class="menu__item menu__link menu__link-purchases" href="#">Наша группа</a>
+</nav>				<div class="footer__credits">
+					© <b>KEYSHOP</b><br>
+					
+				</div>
+			</footer>
+		</div>
+		<script src="../../code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="../templates/keys/assets/vendor/fancybox/jquery.fancybox.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('document').ready(function(){
+				$('.games__item').on('click', function(){
+					var product = $(this).data('product');
+
+					if( product > 0 ){
+						$.ajax({
+							url: '/ajax/',
+							type: 'POST',
+							data: "id=" + product,
+							dataType: 'html',
+							success: function(html){
+								if( html.length > 0 ){
+									$.fancybox.open( $(html).html() );
+								}
+							}
+						});
+					}
+				});
+
+				$('.random__aitem').on('click', function(){
+					openModal($(this));
+				});
+
+				$('.random__item').on('click', function(){
+					openModal($(this));
+				});
+
+				function openModal($that){
+					var $popup = $that.find('.games__popup-bg');
+
+					if( $popup.length > 0 ){
+						$.fancybox.open( $popup.html() );
+					}
+				};
+			});
+		</script>
+	</body>
+
+
+</html>
